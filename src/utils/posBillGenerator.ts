@@ -30,8 +30,8 @@ export function generatePOSBill(billData: BillData): void {
   // Helper to detect if running inside a webview
   function isInWebView() {
     return (
-      (window as any).flutter_inappwebview !== undefined ||
-      (window as any).ReactNativeWebView !== undefined ||
+      (window as unknown as Record<string, unknown>)["flutter_inappwebview"] !== undefined ||
+      (window as unknown as Record<string, unknown>)["ReactNativeWebView"] !== undefined ||
       window.navigator.userAgent.includes('wv') // Android WebView
     );
   }
@@ -364,8 +364,8 @@ export function generatePOSBill(billData: BillData): void {
     window.onload = function() {
       // Hide close button in webview (window.close won't work)
       var isWebView = (
-        window.flutter_inappwebview !== undefined ||
-        window.ReactNativeWebView !== undefined ||
+        (window["flutter_inappwebview"] !== undefined) ||
+        (window["ReactNativeWebView"] !== undefined) ||
         window.navigator.userAgent.includes('wv')
       );
       if (isWebView) {
