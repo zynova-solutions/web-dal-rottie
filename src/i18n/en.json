@@ -1,0 +1,125 @@
+{
+  "common": {
+    "home": "Home",
+    "menu": "Menu",
+    "reservation": "Reservation",
+    "contact": "Contact",
+    "about": "About",
+    "catering": "Catering",
+    "blog": "Blog",
+    "orderOnline": "Order Online",
+    "readMore": "Read More",
+    "bookTable": "Book a Table",
+    "viewMenu": "View Menu"
+  },
+  "home": {
+    "hero": {
+      "title": "Authentic North Indian Cuisine",
+      "subtitle": "Experience the rich flavors of India in Frankfurt",
+      "cta": "Explore Our Menu"
+    },
+    "about": {
+      "title": "About Dal Rotti",
+      "description": "Dal Rotti brings the authentic taste of North India to Frankfurt. Our carefully crafted dishes use traditional recipes and the finest ingredients to deliver a memorable dining experience."
+    },
+    "specialties": {
+      "title": "Our Specialties",
+      "description": "Discover our chef's special dishes that combine traditional Indian flavors with modern culinary techniques."
+    },
+    "testimonials": {
+      "title": "What Our Customers Say",
+      "description": "Don't just take our word for it. Here's what our customers have to say about their Dal Rotti experience."
+    }
+  },
+  "menu": {
+    "title": "Our Menu",
+    "description": "Explore our diverse menu featuring authentic North Indian dishes and beverages",
+    "categories": {
+      "starters": "Chaat & Snacks",
+      "soups": "Soups & Salads",
+      "mains": "Main Courses",
+      "breads": "Breads",
+      "desserts": "Desserts",
+      "drinks": "Drinks"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We'd love to hear from you. Get in touch with us for reservations, feedback, or any inquiries.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening Hours",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "reservation": {
+    "title": "Reserve a Table",
+    "description": "Book your table at Dal Rotti for a memorable dining experience",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone Number",
+      "date": "Date",
+      "time": "Time",
+      "guests": "Number of Guests",
+      "occasion": "Occasion (Optional)",
+      "request": "Special Requests (Optional)",
+      "book": "Book Now"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn about our journey, our team, and our passion for authentic Indian cuisine",
+    "story": {
+      "title": "Our Story",
+      "description": "Dal Rotti began with a simple idea: to bring the authentic flavors of North India to Frankfurt. What started as a small family restaurant has grown into a beloved culinary destination."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To serve authentic, high-quality Indian cuisine while providing exceptional service in a warm and welcoming atmosphere."
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "Meet the passionate individuals behind Dal Rotti who work tirelessly to create an exceptional dining experience for our guests."
+    }
+  },
+  "catering": {
+    "title": "Catering Services",
+    "description": "Let us bring the flavors of India to your next event",
+    "services": {
+      "title": "Our Catering Services",
+      "description": "From corporate events to private parties, we offer customized catering solutions to meet your specific needs and preferences."
+    },
+    "packages": {
+      "title": "Catering Packages",
+      "description": "Choose from our carefully curated catering packages or work with our team to create a custom menu for your event."
+    },
+    "contact": {
+      "title": "Contact Us for Catering",
+      "description": "Get in touch with our catering team to discuss your requirements and get a personalized quote."
+    }
+  },
+  "footer": {
+    "address": "Musterstraße 123, 60314 Frankfurt",
+    "phone": "+49 69 123456789",
+    "email": "info@dalrotti.com",
+    "hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday - Friday: 11:30 - 22:30",
+      "weekends": "Saturday - Sunday: 12:00 - 23:00"
+    },
+    "newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe"
+    },
+    "social": "Follow Us",
+    "copyright": "© 2025 Dal Rotti. All rights reserved."
+  }
+}

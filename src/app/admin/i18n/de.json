@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "dashboard": "Übersicht",
+    "menu": "Speisekarte",
+    "orders": "Bestellungen",
+    "customers": "Kunden",
+    "reports": "Berichte",
+    "coupons": "Gutscheine",
+    "loyalty": "Treueprogramm",
+    "inventory": "Inventar",
+    "zones": "Lieferzonen",
+    "settings": "Einstellungen",
+    "roles": "Rollen",
+    "notifications": "Benachrichtigungen",
+    "backup": "Backup/Export"
+  },
+  "login": {
+    "title": "Admin Login",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "button": "Anmelden",
+    "roleNote": "Rollenbasierter Zugriff wird implementiert."
+  },
+  "dashboard": {
+    "title": "Admin Übersicht",
+    "totalSales": "Gesamtumsatz",
+    "activeOrders": "Aktive Bestellungen",
+    "pendingDeliveries": "Ausstehende Lieferungen",
+    "popularDishes": "Beliebte Gerichte",
+    "welcome": "Willkommen im Admin-Bereich. Verwenden Sie die Navigation oben, um das Restaurant zu verwalten."
+  },
+  "inventory": {
+    "title": "Inventarverwaltung",
+    "desc": "Bestände verfolgen, Ausverkauft-Flags usw."
+  }
+}

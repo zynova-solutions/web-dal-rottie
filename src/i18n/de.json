@@ -1,0 +1,125 @@
+{
+  "common": {
+    "home": "Startseite",
+    "menu": "Speisekarte",
+    "reservation": "Reservierung",
+    "contact": "Kontakt",
+    "about": "Über uns",
+    "catering": "Catering",
+    "blog": "Blog",
+    "orderOnline": "Online bestellen",
+    "readMore": "Mehr erfahren",
+    "bookTable": "Tisch reservieren",
+    "viewMenu": "Speisekarte ansehen"
+  },
+  "home": {
+    "hero": {
+      "title": "Authentische nordindische Küche",
+      "subtitle": "Erleben Sie die vielfältigen Aromen Indiens in Frankfurt",
+      "cta": "Entdecken Sie unsere Speisekarte"
+    },
+    "about": {
+      "title": "Über Dal Rotti",
+      "description": "Dal Rotti bringt den authentischen Geschmack Nordindiens nach Frankfurt. Unsere sorgfältig zubereiteten Gerichte verwenden traditionelle Rezepte und die besten Zutaten, um ein unvergessliches kulinarisches Erlebnis zu bieten."
+    },
+    "specialties": {
+      "title": "Unsere Spezialitäten",
+      "description": "Entdecken Sie die besonderen Gerichte unseres Küchenchefs, die traditionelle indische Aromen mit modernen kulinarischen Techniken kombinieren."
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "description": "Nehmen Sie nicht nur uns beim Wort. Hier erfahren Sie, was unsere Kunden über ihre Erfahrungen bei Dal Rotti sagen."
+    }
+  },
+  "menu": {
+    "title": "Unsere Speisekarte",
+    "description": "Entdecken Sie unsere vielfältige Speisekarte mit authentischen nordindischen Gerichten und Getränken",
+    "categories": {
+      "starters": "Chaat & Snacks",
+      "soups": "Suppen & Salate",
+      "mains": "Hauptgerichte",
+      "breads": "Brot",
+      "desserts": "Desserts",
+      "drinks": "Getränke"
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "description": "Wir freuen uns, von Ihnen zu hören. Kontaktieren Sie uns für Reservierungen, Feedback oder Anfragen.",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "hours": "Öffnungszeiten",
+    "form": {
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden"
+    }
+  },
+  "reservation": {
+    "title": "Tisch reservieren",
+    "description": "Reservieren Sie Ihren Tisch bei Dal Rotti für ein unvergessliches kulinarisches Erlebnis",
+    "form": {
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "phone": "Telefonnummer",
+      "date": "Datum",
+      "time": "Uhrzeit",
+      "guests": "Anzahl der Gäste",
+      "occasion": "Anlass (Optional)",
+      "request": "Besondere Wünsche (Optional)",
+      "book": "Jetzt reservieren"
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "description": "Erfahren Sie mehr über unsere Reise, unser Team und unsere Leidenschaft für authentische indische Küche",
+    "story": {
+      "title": "Unsere Geschichte",
+      "description": "Dal Rotti begann mit einer einfachen Idee: die authentischen Aromen Nordindiens nach Frankfurt zu bringen. Was als kleines Familienrestaurant begann, hat sich zu einem beliebten kulinarischen Ziel entwickelt."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Authentische, hochwertige indische Küche zu servieren und dabei einen außergewöhnlichen Service in einer warmen und einladenden Atmosphäre zu bieten."
+    },
+    "team": {
+      "title": "Unser Team",
+      "description": "Lernen Sie die leidenschaftlichen Personen hinter Dal Rotti kennen, die unermüdlich daran arbeiten, ein außergewöhnliches kulinarisches Erlebnis für unsere Gäste zu schaffen."
+    }
+  },
+  "catering": {
+    "title": "Catering-Services",
+    "description": "Lassen Sie uns die Aromen Indiens zu Ihrer nächsten Veranstaltung bringen",
+    "services": {
+      "title": "Unsere Catering-Dienste",
+      "description": "Von Firmenveranstaltungen bis hin zu privaten Feiern bieten wir maßgeschneiderte Catering-Lösungen, die Ihren spezifischen Bedürfnissen und Vorlieben entsprechen."
+    },
+    "packages": {
+      "title": "Catering-Pakete",
+      "description": "Wählen Sie aus unseren sorgfältig zusammengestellten Catering-Paketen oder arbeiten Sie mit unserem Team zusammen, um ein individuelles Menü für Ihre Veranstaltung zu erstellen."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns für Catering",
+      "description": "Nehmen Sie Kontakt mit unserem Catering-Team auf, um Ihre Anforderungen zu besprechen und ein persönliches Angebot zu erhalten."
+    }
+  },
+  "footer": {
+    "address": "Musterstraße 123, 60314 Frankfurt",
+    "phone": "+49 69 123456789",
+    "email": "info@dalrotti.com",
+    "hours": {
+      "title": "Öffnungszeiten",
+      "weekdays": "Montag - Freitag: 11:30 - 22:30",
+      "weekends": "Samstag - Sonntag: 12:00 - 23:00"
+    },
+    "newsletter": {
+      "title": "Abonnieren Sie unseren Newsletter",
+      "placeholder": "Ihre E-Mail-Adresse",
+      "subscribe": "Abonnieren"
+    },
+    "social": "Folgen Sie uns",
+    "copyright": "© 2024 Dal Rotti. Alle Rechte vorbehalten."
+  }
+}

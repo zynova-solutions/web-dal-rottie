@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+ * DAL ROTTI THEME SYSTEM
+ * 
+ * This theme uses a dual-mode approach with light and dark themes.
+ * - Variables are defined in :root for light mode and [data-theme='dark'] for dark mode
+ * - Sections can be styled with .primary-section or .contrast-section to create visual hierarchy
+ * - All colors have been tested for accessibility with a minimum contrast ratio of 4.5:1
+ */
+
+:root {
+  /* Light theme colors - Enhanced contrast for better readability */
+  /* Primary colors are now defined solely in theme.css */
+  
+  --color-background: #FFFFFF;  /* Pure White for maximum contrast */
+  --color-background-secondary: #F9F2E9;  /* Warm Parchment */
+  --color-background-tertiary: #F0E6D9;  /* Gentle Beige */
+  
+  --color-text: #1A202C;  /* Near Black for maximum contrast */
+  --color-text-secondary: #2D3748;  /* Dark Slate - darker for better contrast */
+  --color-text-tertiary: #4A5568;  /* Medium Slate - darker for better contrast */
+  
+  --color-border: #E2D6C9;  /* Warm Border */
+  --color-border-hover: #C8B9A9;  /* Rich Border */
+  
+  --color-success: #2F855A;  /* Darker Fresh Coriander for better contrast */
+  --color-error: #C53030;  /* Darker Bright Chili for better contrast */
+  --color-warning: #C05621;  /* Darker Amber Spice for better contrast */
+
+  /* Shadows for depth */
+  --shadow-sm: 0 1px 2px rgba(26, 32, 44, 0.07);
+  --shadow-md: 0 4px 6px rgba(26, 32, 44, 0.1);
+  --shadow-lg: 0 10px 15px rgba(26, 32, 44, 0.12);
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* [data-theme='dark'] block removed as dark mode is disabled */
+
+@layer base {
+  body {
+    @apply bg-background text-text; /* Removed transition */
+  }
+
+  /* Accessibility improvements */
+  :focus {
+    @apply outline-2 outline-primary outline-offset-2;
+  }
+
+  /* Improve link underlines for better readability */
+  a {
+    @apply underline-offset-2 decoration-1 text-primary hover:text-primary-dark 
+           transition-colors; /* Removed dark: styles */
+  }
+
+  /* Smooth scrolling for anchor links */
+  html {
+    @apply scroll-smooth;
+  }
+
+  /* Improve text contrast and hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text; /* Removed dark: styles and transition */
+  }
+  
+  /* Specific heading styles */
+  h1 {
+    @apply text-4xl font-semibold tracking-tight; /* Changed font-bold to font-semibold */
+  }
+  
+  h2 {
+    @apply text-3xl font-semibold tracking-tight; /* Changed font-bold to font-semibold */
+  }
+  
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+  
+  h4 {
+    @apply text-xl font-semibold;
+  }
+  
+  h5, h6 {
+    @apply text-lg font-medium;
+  }
+
+  p {
+    @apply text-text-secondary leading-relaxed; /* Removed dark: styles and transition */
+  }
+
+  /* Form elements with improved styling and contrast */
+  input, textarea, select {
+    @apply bg-background 
+           text-text 
+           border-border rounded-md
+           focus:border-primary 
+           focus:ring-1 focus:ring-primary
+           transition-all duration-200; /* Removed dark: styles */
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
+  }
+
+  /* Button styles with improved interactions and contrast */
+  .btn {
+    @apply px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium 
+           transition-all duration-200 ease-out
+           transform hover:scale-[1.02] active:scale-[0.98]
+           focus:outline-none focus:ring-2 focus:ring-offset-2
+           shadow-sm hover:shadow-md;
+  }
+
+  /* Base button styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium
+           transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed text-center;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark hover:text-white
+           focus:ring-primary focus:ring-opacity-50 transition-colors;
+           /* Removed dark: styles */ /* Added hover:text-white */
+  }
+
+  .btn-secondary {
+    @apply bg-background-secondary text-text border border-border
+           hover:bg-background-tertiary hover:border-border-hover
+           focus:ring-text focus:ring-opacity-20 
+           transition-colors; /* Removed dark: styles */
+  }
+
+  /* Card styles with improved depth and contrast */
+  .card {
+    @apply bg-background-secondary
+           shadow-md hover:shadow-lg 
+           p-4 sm:p-6 transition-all duration-200
+           border border-border hover:border-border-hover
+           rounded-lg; /* Removed dark: styles */
+  }
+
+  /* Card heading specific styles to ensure visibility */
+  .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
+    @apply text-text; /* Removed dark: styles and transition */
+  }
+
+  /* Form styles with better feedback and contrast */
+  .form-input {
+    @apply w-full rounded-md border-border bg-background
+           focus:border-primary focus:ring-1 focus:ring-primary
+           transition-colors; /* Removed dark: styles */
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-text mb-2; /* Removed dark: styles and transition */
+  }
+
+  /* Section styles with better spacing */
+  .section {
+    @apply py-12 sm:py-16 md:py-20; /* Removed transition */
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl font-semibold text-text mb-6 sm:mb-10 text-center; /* Changed font-bold to font-semibold */
+  }
+
+  /* 
+   * PRIMARY SECTION - Default section style
+   * Light mode: White background with dark text
+   * Light mode: White background with dark text
+   * Dark mode: (Removed)
+   */
+  .primary-section {
+    @apply bg-background; /* Removed dark: styles and transition */
+  }
+  
+  .primary-section h1, .primary-section h2, .primary-section h3, 
+  .primary-section h4, .primary-section h5, .primary-section h6 {
+    @apply text-text; /* Removed dark: styles and transition */
+  }
+  
+  .primary-section p, .primary-section li {
+    @apply text-text-secondary; /* Removed dark: styles and transition */
+  }
+
+  /* 
+   * CONTRAST SECTION - Creates visual contrast with the primary section
+   * Light mode: Light beige background with dark text
+   * Dark mode: (Removed)
+   */
+  .contrast-section {
+    @apply bg-background-secondary; /* Removed dark: styles and transition */
+  }
+  
+  .contrast-section h1, .contrast-section h2, .contrast-section h3, 
+  .contrast-section h4, .contrast-section h5, .contrast-section h6 {
+    @apply text-text; /* Removed dark: styles and transition */
+  }
+  
+  .contrast-section p, .contrast-section li {
+    @apply text-text-secondary; /* Removed dark: styles and transition */
+  }
+
+  /* Hero section styles with better visual impact and contrast */
+  .hero {
+    @apply relative bg-background-tertiary
+           overflow-hidden py-16 sm:py-20 md:py-24; /* Removed dark: styles and transition */
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50 backdrop-blur-[1px];
+  }
+
+  .hero-content {
+    @apply relative z-10 px-4 text-center;
+  }
+  
+  /* Hero headings need to be visible on any background */
+  .hero-content h1, .hero-content h2, .hero-content h3,
+  .hero-content h4, .hero-content h5, .hero-content h6,
+  .hero-content p {
+    @apply text-white; /* Removed dark: styles. Always white text in hero sections with overlay */
+  }
+
+  /* Navigation styles with better feedback and contrast */
+  .nav-link {
+    @apply text-text-secondary hover:text-primary 
+           transition-colors duration-200 relative
+           /* Removed dark: styles */
+           after:absolute after:bottom-0 after:left-0 
+           after:w-full after:h-0.5 after:bg-primary
+           after:transform after:scale-x-0 after:origin-left
+           after:transition-transform hover:after:scale-x-100;
+  }
+  
+  /* Active nav link */
+  .nav-link-active {
+    @apply text-primary
+           after:scale-x-100; /* Removed dark: styles */
+  }
+  
+  /* Ensure primary text in contrast sections has proper contrast */
+  /* .contrast-section .text-primary rule removed as it was dark-mode specific */
+  
+  /* Ensure buttons in contrast sections have proper contrast in dark mode */
+  /* .contrast-section .btn-secondary rule removed as it was dark-mode specific */
+}
+
+@layer utilities {
+  /* Utility classes for text colors in different contexts */
+  .text-on-primary {
+    @apply text-text; /* Removed dark: styles and transition */
+  }
+  
+  .text-on-contrast {
+    @apply text-text; /* Removed dark: styles and transition */
+  }
+  
+  /* Additional utility classes for common text colors */
+  .text-primary {
+    @apply text-[var(--color-primary)]; /* Removed dark: styles and transition */
+  }
+  
+  .text-muted {
+    @apply text-text-tertiary; /* Removed dark: styles and transition */
+  }
+  
+  /* Hide horizontal scrollbar utility (for menu category bar) */
+  .hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}

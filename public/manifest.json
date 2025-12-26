@@ -1,0 +1,58 @@
+{
+  "name": "Dal Rotti - Authentic Indian Restaurant",
+  "short_name": "Dal Rotti",
+  "description": "Experience authentic Indian cuisine at Dal Rotti in Frankfurt. Traditional flavors, modern dining.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d4af37",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/primary-version.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "restaurant", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Reserve Table",
+      "short_name": "Reserve",
+      "description": "Make a reservation at Dal Rotti",
+      "url": "/en/reservation",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "View Menu",
+      "short_name": "Menu",
+      "description": "Browse our authentic Indian menu",
+      "url": "/en/menu",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "menu": "Menu",
+    "orders": "Orders",
+    "customers": "Customers",
+    "reports": "Reports",
+    "coupons": "Coupons",
+    "loyalty": "Loyalty",
+    "inventory": "Inventory",
+    "zones": "Zones",
+    "settings": "Settings",
+    "roles": "Roles",
+    "notifications": "Notifications",
+    "backup": "Backup/Export"
+  },
+  "login": {
+    "title": "Admin Login",
+    "username": "Username",
+    "password": "Password",
+    "button": "Login",
+    "roleNote": "Role-based access will be implemented."
+  },
+  "dashboard": {
+    "title": "Admin Dashboard",
+    "totalSales": "Total Sales",
+    "activeOrders": "Active Orders",
+    "pendingDeliveries": "Pending Deliveries",
+    "popularDishes": "Popular Dishes",
+    "welcome": "Welcome to the admin panel. Use the navigation above to manage the restaurant."
+  },
+  "inventory": {
+    "title": "Inventory Management",
+    "desc": "Track stock, sold-out flags, etc."
+  }
+}

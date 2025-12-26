@@ -1,0 +1,1653 @@
+{
+	"info": {
+		"name": "Dal Rotti API",
+		"description": "Complete API collection for Dal Rotti restaurant ordering system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "dal-rotti-backend"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register User (Signup)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\",\n  \"phoneNo\": \"+491234567890\",\n  \"role\": \"customer\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						},
+						"description": "Register a new customer account. Role defaults to 'customer' if not specified."
+					}
+				},
+				{
+					"name": "Register Admin User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Admin User\",\n  \"email\": \"admin@dalrotti.com\",\n  \"password\": \"AdminSecure123!\",\n  \"phoneNo\": \"+491234567890\",\n  \"role\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/signup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						},
+						"description": "Register a new admin account. Set role to 'admin' to create an admin user who can access all admin endpoints."
+					}
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identifier\": \"john@example.com\",\n  \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login user with email or phone number. Response includes user role and JWT tokens. Use 'identifier' field for email or phoneNo."
+					},
+					"response": [
+						{
+							"name": "Successful Login Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identifier\": \"admin@dalrotti.com\",\n  \"password\": \"AdminSecure123!\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"success\": true,\n  \"message\": \"Login successful\",\n  \"data\": {\n    \"user\": {\n      \"id\": \"uuid-here\",\n      \"email\": \"admin@dalrotti.com\",\n      \"name\": \"Admin User\",\n      \"phoneNo\": \"+491234567890\",\n      \"role\": \"admin\"\n    },\n    \"session\": {\n      \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\n      \"refreshToken\": \"refresh-token-here\",\n      \"expires_at\": 1234567890,\n      \"tokenType\": \"bearer\"\n    }\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identifier\": \"admin@dalrotti.com\",\n  \"password\": \"AdminSecure123!\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login as admin. Same endpoint as regular login, but response will include role: 'admin'. Save the accessToken to use for admin-only endpoints."
+					}
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"your_refresh_token_here\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/refresh-token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh-token"
+							]
+						},
+						"description": "Get new access token using refresh token"
+					}
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"john@example.com\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/forgot-password",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						},
+						"description": "Request password reset email"
+					}
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"token\": \"reset_token_from_email\",\n  \"password\": \"newPassword123\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/reset-password",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						},
+						"description": "Reset password using token from email"
+					}
+				},
+				{
+					"name": "Google OAuth Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/google",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"google"
+							]
+						},
+						"description": "Initiate Google OAuth login flow (returns OAuth URL)"
+					}
+				},
+				{
+					"name": "Google OAuth Callback",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"code\": \"auth_code_from_google\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/google/callback",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"google",
+								"callback"
+							]
+						},
+						"description": "Handle Google OAuth callback with authorization code"
+					}
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						},
+						"description": "Logout current user"
+					}
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/categories/getall",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"getall"
+							]
+						},
+						"description": "Get list of all menu categories"
+					}
+				},
+				{
+					"name": "Get All Dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/dishes/getall",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"dishes",
+								"getall"
+							]
+						},
+						"description": "Get list of all dishes with category info"
+					}
+				},
+				{
+					"name": "Get Dish by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/dishes/get/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"dishes",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Get details of a specific dish"
+					}
+				},
+				{
+					"name": "Get Special Dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/dishes/special",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"dishes",
+								"special"
+							]
+						},
+						"description": "Get list of special/featured dishes"
+					}
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Get Cart Items",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/cart/get",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								"get"
+							]
+						},
+						"description": "Get all items in user's cart"
+					}
+				},
+				{
+					"name": "Add or Update Cart Item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dishId\": 1,\n  \"quantity\": 2\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/cart/addorupdate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								"addorupdate"
+							]
+						},
+						"description": "Add a dish to cart or update quantity if already exists"
+					}
+				},
+				{
+					"name": "Remove Cart Item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/cart/remove/:dishId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								"remove",
+								":dishId"
+							],
+							"variable": [
+								{
+									"key": "dishId",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Remove item from cart by dishId"
+					}
+				},
+				{
+					"name": "Clear Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/cart/clear",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"cart",
+								"clear"
+							]
+						},
+						"description": "Clear all items from cart"
+					}
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"description": "## Payment Flow Overview\n\n### How Payments Work:\n1. **Initiate Payment**: POST /api/payments/initiate\n   - Creates Payment record (status: Pending)\n   - Stores order data temporarily\n   - Creates SumUp checkout\n   - Returns checkout URL for customer\n\n2. **Customer Pays**: User redirected to SumUp\n   - **Success**: Redirects to `/user/payment-success?paymentId={id}`\n   - **Failure**: Redirects to `/user/payment-failed?paymentId={id}&reason={code}&message={msg}`\n\n3. **Order Creation**: Happens automatically on payment success\n   - Webhook receives payment confirmation\n   - Creates Order with OrderItems\n   - Links Payment to Order\n   - Clears pending data\n\n### Payment Retry Flow:\n- Cart is NOT cleared until payment succeeds\n- Failed payments allow retry with same items\n- User can update payment method or details\n\n### Testing (Sandbox Mode):\n- Use `/test/simulate-success` to manually complete payments\n- Use `/test/simulate-failure` to test failure scenarios\n- Poll `/checkout-status/:paymentId` for real-time status\n\n### Return URLs:\n- **Success**: `{FRONTEND_URL}/user/payment-success?paymentId={payment_id}`\n- **Failure**: `{FRONTEND_URL}/user/payment-failed?paymentId={payment_id}&reason={decline_code}&message={message}`",
+			"item": [
+				{
+					"name": "Initiate Payment (Logged-in User)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orderItems\": [\n    {\n      \"dishId\": 1,\n      \"quantity\": 2,\n      \"price\": 12.50\n    }\n  ],\n  \"totalAmount\": 25.00,\n  \"currency\": \"EUR\",\n  \"deliveryAddress\": \"Hauptstraße 123\",\n  \"area\": \"Berlin Mitte\",\n  \"postalCode\": \"10115\",\n  \"latitude\": 52.5200,\n  \"longitude\": 13.4050\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/payments/initiate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"initiate"
+							]
+						},
+						"description": "Initiate payment for logged-in user.\n\n**Returns**:\n- `checkout_url`: Redirect user here for payment\n- `paymentId`: Reference for tracking\n- `checkoutId`: SumUp checkout ID\n\n**After Payment**:\n- Success → User redirected to frontend success page\n- Failure → User redirected to frontend failure page with error details\n- Cart preserved until success to allow retry"
+					}
+				},
+				{
+					"name": "Initiate Payment (Guest User)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orderItems\": [\n    {\n      \"dishId\": 1,\n      \"quantity\": 1,\n      \"price\": 10.00\n    }\n  ],\n  \"totalAmount\": 10.00,\n  \"currency\": \"EUR\",\n  \"name\": \"Guest User\",\n  \"email\": \"guest@example.com\",\n  \"phoneNo\": \"+491234567890\",\n  \"deliveryAddress\": \"Teststraße 123\",\n  \"area\": \"Berlin Mitte\",\n  \"postalCode\": \"10115\",\n  \"latitude\": 52.5200,\n  \"longitude\": 13.4050\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/payments/initiate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"initiate"
+							]
+						},
+						"description": "Initiate payment for guest user (must provide name, email, phone)"
+					}
+				},
+				{
+					"name": "Get Payment Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/payments/payment-status/:paymentId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"payment-status",
+								":paymentId"
+							],
+							"variable": [
+								{
+									"key": "paymentId",
+									"value": "099ce9e8-81f3-47db-9930-9add5ce4ab0e"
+								}
+							]
+						},
+						"description": "Get payment status from database"
+					}
+				},
+				{
+					"name": "Check SumUp Checkout Status (Polling)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/payments/checkout-status/:paymentId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"checkout-status",
+								":paymentId"
+							],
+							"variable": [
+								{
+									"key": "paymentId",
+									"value": "099ce9e8-81f3-47db-9930-9add5ce4ab0e"
+								}
+							]
+						},
+						"description": "Poll SumUp API for real-time checkout status. Use this endpoint to check payment completion."
+					}
+				},
+				{
+					"name": "Simulate Payment Success (Sandbox)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"paymentId\": \"099ce9e8-81f3-47db-9930-9add5ce4ab0e\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/payments/test/simulate-success",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"test",
+								"simulate-success"
+							]
+						},
+						"description": "**SANDBOX ONLY** - Manually complete a pending payment.\n\n**What it does**:\n1. Marks payment as 'Paid'\n2. Creates Order with OrderItems\n3. Links Payment to Order\n4. Clears pending order data\n\n**Use when**:\n- Testing payment flow without actual SumUp\n- Completing stuck payments in development\n- Creating test orders for dashboard\n\n**Required**: Either `paymentId` or `checkoutId`"
+					}
+				},
+				{
+					"name": "Simulate Payment Failure (Sandbox)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"checkoutId\": \"b1ef5ce6-8b3d-434d-a260-c35af9d3f5fa\",\n  \"paymentId\": \"099ce9e8-81f3-47db-9930-9add5ce4ab0e\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/payments/test/simulate-failure",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"test",
+								"simulate-failure"
+							]
+						},
+						"description": "Simulate failed payment (SANDBOX ONLY). Marks payment as failed."
+					}
+				},
+				{
+					"name": "Get Checkout Details (Testing)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/payments/checkout/:checkoutId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"payments",
+								"checkout",
+								":checkoutId"
+							],
+							"variable": [
+								{
+									"key": "checkoutId",
+									"value": "b1ef5ce6-8b3d-434d-a260-c35af9d3f5fa"
+								}
+							]
+						},
+						"description": "Get checkout details from SumUp API (for testing)"
+					}
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Request Wolt Delivery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orderId\": \"ORD123456\",\n  \"pickupAddress\": \"Restaurant Address\",\n  \"dropoffAddress\": \"Customer Address\",\n  \"customerPhone\": \"+491234567890\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/request-wolt-delivery",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"request-wolt-delivery"
+							]
+						},
+						"description": "Request Wolt delivery for an order"
+					}
+				},
+				{
+					"name": "Get My Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/my-orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"my-orders"
+							]
+						},
+						"description": "Get all orders for logged-in user"
+					}
+				},
+				{
+					"name": "Get Order by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/get/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Get details of a specific order (admin or owner)"
+					}
+				},
+				{
+					"name": "Get All Orders (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/getall",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"getall"
+							]
+						},
+						"description": "Get all orders (Admin only)"
+					}
+				},
+				{
+					"name": "Get Kanban Orders (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/getall-kanban",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"getall-kanban"
+							]
+						},
+						"description": "Get orders in Kanban format (Admin only)"
+					}
+				},
+				{
+					"name": "Update Order Status (Admin)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"confirmed\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/status/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"status",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Update order status (Admin only)"
+					}
+				},
+				{
+					"name": "Update Order Status Kanban (Admin)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orderId\": 1,\n  \"status\": \"preparing\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/status-kanban",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"status-kanban"
+							]
+						},
+						"description": "Update order status for Kanban view (Admin only)"
+					}
+				},
+				{
+					"name": "Cancel Order",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/cancel/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"cancel",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Cancel order (user can cancel their own, admin can cancel any)"
+					}
+				},
+				{
+					"name": "Delete Order (Admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/orders/delete/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Delete order (Admin only)"
+					}
+				}
+			]
+		},
+		{
+			"name": "Coupons",
+			"item": [
+				{
+					"name": "Get All Coupons (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/coupons/getall",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"coupons",
+								"getall"
+							]
+						},
+						"description": "Get list of all coupons (Admin only)"
+					}
+				},
+				{
+					"name": "Get Coupon by ID (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/coupons/get/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"coupons",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Get specific coupon by ID (Admin only)"
+					}
+				},
+				{
+					"name": "Get Active Coupons (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/coupons/active/list",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"coupons",
+								"active",
+								"list"
+							]
+						},
+						"description": "Get list of active coupons (Admin only)"
+					}
+				},
+				{
+					"name": "Apply Coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"code\": \"WELCOME10\",\n  \"totalAmount\": 50.00\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/coupons/apply",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"coupons",
+								"apply"
+							]
+						},
+						"description": "Apply coupon code and get discount amount"
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"description": "Admin-only endpoints. To access these:\n1. Create admin account: POST /api/auth/signup with role: 'admin'\n2. Login: POST /api/auth/login (same endpoint as regular users)\n3. Copy accessToken from login response\n4. Use Bearer token in Authorization header\n\nAll requests require:\n- Valid JWT token (from login)\n- User role must be 'admin'\n\nExample: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+			"item": [
+				{
+					"name": "Dashboard Stats",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/dashboard/admin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"dashboard",
+								"admin"
+							]
+						},
+						"description": "Get admin dashboard statistics (Admin only). Returns: totalSalesToday, activeOrders, pendingDeliveries, popularDish, salesTrend (last 7 days), paymentMix, liveOrders."
+					}
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Appetizers\",\n  \"description\": \"Start your meal right\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/categories/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"create"
+							]
+						},
+						"description": "Create new category (Admin only)"
+					}
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/categories/delete/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Delete category (Admin only)"
+					}
+				},
+				{
+					"name": "Create Dish",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Butter Chicken",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Creamy tomato-based curry",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12.50",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isVeg",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "spiceLevel",
+									"value": "medium",
+									"type": "text"
+								},
+								{
+									"key": "isAvailable",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/dishes/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"dishes",
+								"create"
+							]
+						},
+						"description": "Create new dish with image upload (Admin only)"
+					}
+				},
+				{
+					"name": "Update Dish",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "price",
+									"value": "13.50",
+									"type": "text"
+								},
+								{
+									"key": "isAvailable",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/dishes/dishes/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"dishes",
+								"dishes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Update dish with optional new image (Admin only)"
+					}
+				},
+				{
+					"name": "Update Dish Status",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"isAvailable\": false,\n  \"isSoldOut\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/dishes/status/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"dishes",
+								"status",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Update dish availability/sold-out status (Admin only)"
+					}
+				},
+				{
+					"name": "Delete Dish",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/dishes/delete/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"dishes",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Delete dish (Admin only)"
+					}
+				},
+				{
+					"name": "Create Coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"code\": \"WELCOME10\",\n  \"type\": \"percentage\",\n  \"value\": 10,\n  \"minOrderAmount\": 20.00,\n  \"maxUsage\": 100,\n  \"expiryDate\": \"2025-12-31\",\n  \"isActive\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/coupons/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"coupons",
+								"create"
+							]
+						},
+						"description": "Create new coupon (Admin only)"
+					}
+				},
+				{
+					"name": "Update Coupon",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"value\": 15,\n  \"isActive\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/coupons/update/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"coupons",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Update coupon (Admin only)"
+					}
+				},
+				{
+					"name": "Delete Coupon",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/coupons/delete/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"coupons",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Delete coupon (Admin only)"
+					}
+				},
+				{
+					"name": "Get All Users (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/all",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						},
+						"description": "Get list of all users (Admin only)"
+					}
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/get/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Get user details by ID"
+					}
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Updated Name\",\n  \"phoneNo\": \"+491234567890\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/users/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"update"
+							]
+						},
+						"description": "Update user profile"
+					}
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/users/delete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"delete"
+							]
+						},
+						"description": "Delete user account"
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:4000",
+			"type": "string"
+		},
+		{
+			"key": "authToken",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

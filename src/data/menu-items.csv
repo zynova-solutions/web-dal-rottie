@@ -1,0 +1,101 @@
+id,category_en,category_de,name_en,name_de,price,description_en,description_de,gluten_free,vegan,dairy_free,vegetarian,non_vegetarian,spice_level,contains_nuts
+1,Chaat & Snacks,Chaat und Snacks,Aloo Tikki Chaat,Aloo Tikki Chaat,€6.90,"Crispy potato patties, garnished with spiced yogurt, chutneys, and spices.","Knusprige Kartoffelpästchen, garniert mit würzigem Joghurt, Chutneys und Gewürzen.",TRUE,FALSE,FALSE,TRUE,FALSE,,FALSE
+2,Chaat & Snacks,Chaat und Snacks,Samosa Chaat,Samosa Chaat,€6.90,"Spicy samosas, broken into pieces and mixed with yogurt and chutneys.","Pikante Samosas, zerteilt und gemischt mit Joghurt und Chutneys.",TRUE,FALSE,FALSE,TRUE,FALSE,,FALSE
+3,Chaat & Snacks,Chaat und Snacks,Manchurian,Manchurian,€8.90,Indo-Chinese dishes prepared by roughly chopping and frying vegetables.,"Indisch-chinesische Gerichte, die durch grobes Hacken und Frittieren von Gemüse zubereitet werden.",FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+4,Chaat & Snacks,Chaat und Snacks,Vegetable Samosa,Gemüse-Samosa,€5.90,"Savory pancakes made from flour, filled with spiced vegetables.","Herzhafte Pfannkuchen aus Mehl, gefüllt mit gewürztem Gemüse.",FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+5,Chaat & Snacks,Chaat und Snacks,Lamb Keema Samosa,Lamm-Keema-Samosa,€8.50,Pastry filled with spiced minced mutton.,Gebäck gefüllt mit gewürztem Lammhackfleisch.,FALSE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+6,Chaat & Snacks,Chaat und Snacks,Chicken 65,Chicken 65,€9.50,Spicy deep-fried chicken pieces with curry leaves and chilies.,Scharf frittierte Hühnchenstücke mit Curryblättern und Chilis.,TRUE,FALSE,FALSE,FALSE,TRUE,hot,FALSE
+7,Chaat & Snacks,Chaat und Snacks,Indian Railway Cutlet,Indisches Eisenbahnkotelett,€7.90,"A mixture of vegetables and spices, coated in breadcrumbs and deep-fried.","Eine Mischung aus Gemüse und Gewürzen, paniert und frittiert.",FALSE,FALSE,TRUE,TRUE,FALSE,,FALSE
+8,Chaat & Snacks,Chaat und Snacks,Mixed Pakora Basket,Mix-Pakora-Korb,€8.50,Various fried fritters made from vegetables and paneer.,Verschiedene frittierte Krapfen aus Gemüse und Paneer.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+9,Chaat & Snacks,Chaat und Snacks,Chicken Farcha,Chicken Farcha,€8.50,"Parsi-style fried chicken, marinated in spices.","Gebratenes Hähnchen nach Parsi-Art, in Gewürzen mariniert.",FALSE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+10,Chaat & Snacks,Chaat und Snacks,Chicken Sukka,Chicken Sukka,€9.90,Dry chicken curry with coconut and spices.,Trockenes Hähnchen-Curry mit Kokosnuss und Gewürzen.,TRUE,FALSE,FALSE,FALSE,TRUE,hot,FALSE
+11,Chaat & Snacks,Chaat und Snacks,Amritsari Fish,Amritsari Fish,€9.90,"Fried fish, marinated in a spiced chickpea flour batter.","Frittierter Fisch, mariniert in einem gewürzten Kichererbsenmehlteig.",TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+12,Soups & Salads,Suppen & Salate,Tomato Soup,Tomaten-Shorba,€5.90,Spicy tomato soup.,Würzige Tomatensuppe.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+13,Soups & Salads,Suppen & Salate,Lentil Soup,Dal Shorba,€5.50,Lentil soup with Indian spices.,Linsensuppe mit indischen Gewürzen.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+14,Soups & Salads,Suppen & Salate,Mulligatawny Soup,Mulligatawny Soup,€6.50,A rich and spicy soup with lentils and vegetables.,"Eine reichhaltige und würzige Suppe mit Linsen, Gemüse.",TRUE,FALSE,FALSE,TRUE,FALSE,medium,FALSE
+15,Soups & Salads,Suppen & Salate,Kachumber Salad,Kachumber-Salat,€4.90,"Fresh cucumber, tomato, and onion salad with lemon dressing.","Frischer Gurken-, Tomaten- und Zwiebelsalat mit Zitronendressing.",TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+16,Tandoori Specialties,Tandoori-Spezialitäten,Paneer Tikka,Paneer Tikka,€15.90,"Perfectly grilled, marinated paneer cubes.","Perfekt gegrillte, marinierte Paneer-Würfel.",TRUE,FALSE,FALSE,TRUE,FALSE,mild,FALSE
+17,Tandoori Specialties,Tandoori-Spezialitäten,Tandoori Cauliflower,Tandoori Gobi,€15.90,Spiced and grilled cauliflower florets.,Gewürzte und gegrillte Blumenkohlröschen.,TRUE,TRUE,TRUE,TRUE,FALSE,mild,FALSE
+18,Tandoori Specialties,Tandoori-Spezialitäten,Chicken Tikka,Chicken Tikka,€15.90,"Juicy chicken pieces marinated in yogurt and spices, grilled.","Saftige Hühnchenstücke mariniert in Joghurt und Gewürzen, gegrillt.",TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+19,Tandoori Specialties,Tandoori-Spezialitäten,Afghan Tandoori Chicken,Afghanisches Tandoori-Chicken,€16.50,"Mildly spiced, creamy chicken skewers.","Mild gewürzte, cremige Hähnchenspieße.",TRUE,FALSE,FALSE,FALSE,TRUE,mild,FALSE
+20,Tandoori Specialties,Tandoori-Spezialitäten,Tandoori Chicken,Tandoori Chicken,€17.50,Classic marinated and grilled chicken.,Klassisch mariniertes und gegrilltes Huhn.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+21,Tandoori Specialties,Tandoori-Spezialitäten,Lamb Seekh Kebab,Lamm-Seekh-Kebab,€16.50,Spiced kebabs made from minced lamb.,Gewürzte Kebabs aus gehacktem Lamm.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+22,Tandoori Specialties,Tandoori-Spezialitäten,Tandoori Prawns,Tandoori-Garnelen,€19.50,Juicy prawns marinated and grilled.,Saftige marinierte und gegrillte Garnelen.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+23,Tandoori Specialties,Tandoori-Spezialitäten,Lamb Burra Kebab,Lamm-Burra-Kebab,€17.50,Tender lamb chops marinated in spices and grilled.,"Zarte Lammkoteletts, in Gewürzen mariniert und gegrillt.",TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+24,Main Course,Hauptgericht,Roast Lamb in Ghee,Lammbraten in Ghee,€16.90,Aromatic lamb cooked in clarified butter.,"Würziges, in geklärter Butter gebratenes Lammfleisch.",TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+25,Main Course,Hauptgericht,Rogan Josh,Josh Rogan Josh,€16.90,Aromatic lamb curry with Kashmiri spices.,Aromatisches Lamm-Curry mit Gewürzen aus Kaschmir.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+26,Main Course,Hauptgericht,Palak Lamb,Palak Gosht,€16.90,Lamb cooked with spinach.,Mit Spinat gekochtes Lammfleisch.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+27,Main Course,Hauptgericht,Lamb Korma,Lamm-Korma,€16.90,Lamb in a rich and creamy sauce.,Lamm in einer reichhaltigen und cremigen Sauce.,TRUE,FALSE,FALSE,FALSE,TRUE,mild,TRUE
+28,Main Course,Hauptgericht,Shrimp Xacuti,Garnelen Xacuti,€18.90,Goan-style shrimp curry with roasted spices.,Garnelen-Curry nach goanischer Art mit gerösteten Gewürzen.,TRUE,FALSE,FALSE,FALSE,TRUE,hot,FALSE
+29,Main Course,Hauptgericht,Fish Moilee,Fisch-Moilee,€17.90,Kerala-style fish curry in coconut milk.,Fischcurry nach Kerala-Art in Kokosmilch.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+30,Main Course,Hauptgericht,Malwani Fish Curry,Malwani Fish Curry,€17.90,Spicy and flavorful fish curry from the Malwan region.,Scharfes und würziges Fisch-Curry aus der Region Malwan.,TRUE,FALSE,FALSE,FALSE,TRUE,hot,FALSE
+31,Main Course,Hauptgericht,Chicken Fried in Ghee,Chicken-Ghee-Braten,€15.90,Spicy chicken cooked in clarified butter.,"Würziges, in geklärter Butter gebratenes Hähnchen.",TRUE,FALSE,FALSE,FALSE,TRUE,hot,FALSE
+32,Main Course,Hauptgericht,Butter Chicken,Butterhuhn,€15.90,Chicken in a creamy tomato sauce.,Hähnchen in cremiger Tomatensauce.,TRUE,FALSE,FALSE,FALSE,TRUE,mild,TRUE
+33,Main Course,Hauptgericht,Chicken Tikka Masala,Chicken Tikka Masala,€15.90,Grilled chicken pieces in a spicy tomato sauce.,Gegrillte Hühnchenstücke in einer würzigen Tomatensauce.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,TRUE
+34,Main Course,Hauptgericht,Egg Curry,Eier-Curry,€13.90,Eggs cooked with tomato and onions.,Eier mit Tomaten und Zwiebeln gekocht.,TRUE,FALSE,FALSE,TRUE,FALSE,medium,FALSE
+35,Main Course,Hauptgericht,Chicken Aloo Saag,Hähnchen-Aloo Saag,€15.90,Chicken and potatoes cooked with spinach.,Hähnchen und Kartoffeln mit Spinat gekocht.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+36,Main Course,Hauptgericht,Chicken Madras,Hähnchen-Madras,€15.90,Chicken cooked in a relatively spicy curry in the Madras style.,Hähnchen in relativ scharfem Curry nach Madras-Art gekocht.,TRUE,FALSE,FALSE,FALSE,TRUE,hot,FALSE
+37,Main Course,Hauptgericht,Lamb with Mango,Lamm Mango,€16.90,Lamb with Mango Curry Sauce.,Lamm mit Mango-Currysauce.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+38,Main Course,Hauptgericht,Chicken Nilgiri,Chicken Nilgiri,€16.90,Chicken pieces with mint curry sauce.,Hühnchenstücke mit Minz-Currysauce.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+39,Main Course,Hauptgericht,Lamb Nilgiri,Lamm Nilgiri,€18.90,Lamb with mint curry sauce.,Lamm mit Minz-Currysauce.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+40,Main Course,Hauptgericht,Chicken Vindaloo,Chicken Vindaloo,€15.90,"Very spicy, chicken pieces in spicy Ghalode.","Sehr pikant, Hühnchenstücke in scharfer Vindaloo.",TRUE,FALSE,FALSE,FALSE,TRUE,super-hot,FALSE
+41,Main Course,Hauptgericht,Chicken Lamb,Chicken Lamm,€18.90,Creamy mild lamb curry sauce with chicken.,Mild-cremische und Lamm mit Currysauce.,TRUE,FALSE,FALSE,FALSE,TRUE,mild,FALSE
+42,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Dal Tadka,Dal Tadka,€13.90,Yellow lentils enhanced with garlic and spices.,Gelbe Linsen mit Knoblauch und Gewürzen verfeinert.,TRUE,TRUE,TRUE,TRUE,FALSE,mild,FALSE
+43,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Dal Makhani,Dal Makhani,€13.90,Creamy black lentils cooked with butter and spices.,Cremige schwarze Linsen mit Butter und Gewürzen gekocht.,TRUE,FALSE,FALSE,TRUE,FALSE,mild,FALSE
+44,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Palak Paneer,Palak Paneer,€14.90,Cottage cheese in a spinach sauce.,Hüttenkäse in einer Spinatsauce.,TRUE,FALSE,FALSE,TRUE,FALSE,mild,FALSE
+45,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Shahi Paneer,Shahi Paneer,€14.90,Paneer in a rich and creamy tomato-based sauce.,Paneer in einer reichhaltigen und cremigen Sauce auf Tomatenbasis.,TRUE,FALSE,FALSE,TRUE,FALSE,mild,TRUE
+46,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Aloo Saag,Aloo Saag,€13.90,Potatoes cooked with spinach.,Kartoffeln mit Spinat gekocht.,TRUE,TRUE,TRUE,TRUE,FALSE,mild,FALSE
+47,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Kadhai Paneer,Kadhai Paneer,€14.90,Paneer cooked with bell peppers and spices.,Paneer mit Paprika und Gewürzen gekocht.,TRUE,FALSE,FALSE,TRUE,FALSE,medium,FALSE
+48,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Matar Paneer,Matar Paneer,€13.90,Paneer with green peas in gravy sauce.,Paneer mit grünen Erbsen in würziger Sauce.,TRUE,FALSE,FALSE,TRUE,FALSE,mild,FALSE
+49,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Aloo Gobi,Aloo Gobi,€13.90,Cauliflower and potatoes cooked with spices.,Blumenkohl und Kartoffeln mit Gewürzen gekocht.,TRUE,TRUE,TRUE,TRUE,FALSE,mild,FALSE
+50,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Chana Masala,Chana Masala,€13.90,Spicy chickpea curry.,Würziges Kichererbsencurry.,TRUE,TRUE,TRUE,TRUE,FALSE,medium,FALSE
+51,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Spicy Mixed Vegetable Curry,Veg Jhal Farezi,€14.90,Mixed vegetables stir-fried with spices.,Gemischtes Gemüse mit Gewürzen gebraten.,TRUE,TRUE,TRUE,TRUE,FALSE,hot,FALSE
+52,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Beetroot Cutlet in Spinach Sauce,Rote-Beete-Kotelett in Palak-Soße,€14.90,Beetroot patties served in spinach gravy.,Rote-Beete-Pastetchen serviert in Spinatsoße.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+53,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Matar Mushroom,Matar Mushroom,€14.90,Green peas and mushrooms in spicy sauce.,Grüne Erbsen und Pilze in würziger Soße.,TRUE,TRUE,TRUE,TRUE,FALSE,medium,FALSE
+54,Main Course - Vegetarian,Hauptgericht - Vegetarisch,Kashmiri Rajma Curry,Kaschmirisches Rajma Curry,€13.90,North Indian spiced kidney bean.,Nach nordindischer Art gewürzte Kidneybohnen.,TRUE,TRUE,TRUE,TRUE,FALSE,medium,FALSE
+55,Combos,Combos,Aloo Gobi & Puri,Aloo Gobi & Puri,€13.90,"Cauliflower and potato curry, served with puri.","Blumenkohl-Kartoffel-Curry, serviert mit Puri.",FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+56,Combos,Combos,Rajma Curry & Puri,Rajma Curry & Puri,€13.90,Kidney bean curry with puri.,Kidneybohnen-Curry mit puri.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+57,Combos,Combos,Chole Bhature,Chole Bhature,€13.90,Spicy chickpea curry with bhature.,Scharfes Kichererbsen-Curry mit Bhature.,TRUE,FALSE,FALSE,TRUE,FALSE,medium,FALSE
+58,Combos,Combos,Puri with egg curry,Eier-Curry & Puri,€14.90,Egg curry with puri.,Eier-Curry mit puri.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+59,Combos,Combos,Puri with chicken curry,Hähnchen-Curry & Puri,€15.90,Chicken curry with puri.,Chicken-Curry mit puri.,FALSE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+60,Platters,Platters,Veg Chatori Gali Platter,Veg Chatori Gali-Platte,€16.00,"Various popular street food snacks like Paneer Tikka and Veg Manchurian/Aloo/Samosa, Pakora(mixed).","Verschiedene beliebte Streetfood-Snacks wie Paneer Tikka und Veg Manchurian/Aloo/Samosa, Pakora(gemischt).",TRUE,FALSE,FALSE,TRUE,FALSE,,FALSE
+61,Platters,Platters,Platter with meat snacks,Platte mit Fleisch Snacks,€18.90,"A selection of non-vegetarian appetizers like Chicken Tikka, Lamb Samosa, pakora.","Eine Auswahl an nicht-vegetarischen Vorspeisen wie Chicken Tikka, Lammsamosa, pakora.",FALSE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+62,Rice & Biryani,Rice & Biryani,Steamed Rice,Gedünsteter Reis,€3.50,Simple steamed basmati rice.,Einfacher gedünsteter Basmati-Reis.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+63,Rice & Biryani,Rice & Biryani,Peas Pulao,Erbsen Pulao,€7.50,Rice cooked with green peas and spices.,Mit grünen Erbsen und Gewürzen gekochter Reis.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+64,Rice & Biryani,Rice & Biryani,Veg Biryani,Veg Biryani,€13.90,Aromatic cooked vegetable biryani.,Aromatisches gekochtes Gemüse-Biryani.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+65,Rice & Biryani,Rice & Biryani,Chicken Biryani,Chicken Biryani,€15.90,Spicy cooked chicken biryani.,Würziges Biryani mit gekochtem Hähnchen.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+66,Rice & Biryani,Rice & Biryani,Jeera Rice,Jeera Rice,€5.00,Rice seasoned with cumin seeds.,Mit Kreuzkümmel gewürzter Reis.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+67,Rice & Biryani,Rice & Biryani,Tawa Pulao,Tawa Pulao,€15.90,Spicy fried rice with vegetables.,Scharfer gebratener Reis mit Gemüse.,TRUE,TRUE,TRUE,TRUE,FALSE,medium,FALSE
+68,Rice & Biryani,Rice & Biryani,Egg Biryani,Ei-Biryani,€15.90,Biryani with boiled eggs.,Biryani mit gekochten Eiern.,TRUE,FALSE,FALSE,TRUE,FALSE,,FALSE
+69,Rice & Biryani,Rice & Biryani,Lamb Biryani,Lamm-Biryani,€16.90,Rich and aromatic lamb biryani.,Reichhaltiges und aromatisches Lamm-Biryani.,TRUE,FALSE,FALSE,FALSE,TRUE,medium,FALSE
+70,Side Dishes,Beilagen,French Fries,Pommes Frites,€4.50,Crispy potato fries with herbs. (Ketchup/Mayo),Knusprige Kartoffel-Pommes. (Ketchup/Mayo),TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+71,Side Dishes,Beilagen,Sweet Potato Fries,Süßkartoffelpommes,€5.50,Crispy sweet potato fries.,Knusprige Süßkartoffel-Pommes.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+72,Side Dishes,Beilagen,Papad,Papad,€2.50,Crispy lentil crackers.,Knusprige Linsencracker.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+73,Side Dishes,Beilagen,Mixed Vegetable Raita,Gemüse-Raita (gemischt),€3.90,Yogurt with mixed vegetables.,Joghurt mit gemischtem Gemüse.,TRUE,FALSE,FALSE,TRUE,FALSE,,FALSE
+74,Side Dishes,Beilagen,Mixed Pickles,Gemischte Pickles,€2.50,Various Indian pickles.,Verschiedene indische Pickles.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+75,Chutneys,Chutneys,Mango Chutney,Mango-Chutney,€3.00,Sweet and sour mango chutney.,Süß-sauerliches Mango-Chutney.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+76,Chutneys,Chutneys,Dhania Pudina Chutney,Dhania Pudina Chutney,€3.50,Fresh coriander and mint chutney.,Frisches Koriander- und Minz-Chutney.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+77,Chutneys,Chutneys,Imli Chutney,Imli-Chutney,€4.00,Tamarind chutney.,Tamarinden-Chutney.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+78,Breads,Brote,Tandoori Roti,Tandoori Roti,€3.50,Whole wheat flatbread.,Vollkorn-Fladenbrot.,FALSE,TRUE,TRUE,TRUE,FALSE,,FALSE
+79,Breads,Brote,Butter Naan,Butter-Naan,€4.00,Soft flatbread with butter.,Weiches Fladenbrot mit Butter.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+80,Breads,Brote,Cheese Jalapeno Naan,Käse-Jalapeno-Naan,€5.50,Flatbread filled with cheese and jalapenos.,Mit Käse und Jalapeños gefülltes Fladenbrot.,FALSE,FALSE,FALSE,TRUE,FALSE,medium,FALSE
+81,Breads,Brote,Puri,Puri,€2.50,Deep-fried pastry bread.,Frittiertes Fladenbrot.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+82,Breads,Brote,Aloo Kulcha,Aloo Kulcha,€4.90,Bread stuffed with spiced potatoes.,Mit gewürzten Kartoffeln gefülltes Brot.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+83,Breads,Brote,Sesame Naan,Sesam Naan,€4.00,Soft flatbread with sesame.,Weiches Fladenbrot mit Sesam.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+84,Breads,Brote,Naan,Naan,€3.50,Indian bread.,Indisches Brot.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+85,Breads,Brote,Garlic Naan,Knoblauch-Naan,€4.90,Flatbread topped with garlic.,Fladenbrot belegt mit Knoblauch.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+86,Breads,Brote,Aloo Pyaaz Kulcha,Aloo Pyaaz Kulcha,€5.90,Stuffed bread with potatoes and onions.,Gefülltes Brot mit Kartoffeln und Zwiebeln.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+87,Breads,Brote,Pyaaz Kulcha,Pyaaz Kulcha,€4.90,Bread filled with spiced onions.,Mit gewürzten Zwiebeln gefülltes Brot.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+88,Desserts,Nachspeisen,Gulab Jamun,Gulab Jamun,€3.80,Fried milk balls in sugar syrup.,Frittierte Milchbällchen in Zuckersirup.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+89,Desserts,Nachspeisen,Kulfi,Kulfi,€4.00,Traditional Indian ice cream with nuts.,Traditionelles indisches Eis mit Nüssen.,FALSE,FALSE,FALSE,TRUE,FALSE,,TRUE
+90,Desserts,Nachspeisen,Ras Malai,Ras Malai,€4.50,"Delicate dumplings in aromatic milk, refined with saffron and pistachios.","Zarte Klößchen in aromatischer Milch, verfeinert mit Safran und Pistazien.",FALSE,FALSE,FALSE,TRUE,FALSE,,TRUE
+91,Beverages,Getränke,Mango Lassi,Mango Lassi,€4.50,Traditional yogurt drink with mango.,Traditionelles Joghurtgetränk mit Mango.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+92,Beverages,Getränke,Sweet Lassi,Süßer Lassi,€3.90,Traditional sweet yogurt drink.,Traditionelles süßes Joghurtgetränk.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+93,Beverages,Getränke,Salt Lassi,Salziger Lassi,€3.90,Traditional salted yogurt drink.,Traditionelles salziges Joghurtgetränk.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+94,Beverages,Getränke,Masala Chai,Masala Chai,€3.50,Spiced Indian tea with milk.,Gewürzter indischer Tee mit Milch.,FALSE,FALSE,FALSE,TRUE,FALSE,,FALSE
+95,Beverages,Getränke,Fresh Lime Water,Frisches Limettenwasser,€3.20,Refreshing lime water with mint.,Erfrischendes Limettenwasser mit Minze.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+96,Soft Drinks,Erfrischungsgetränke,Coca Cola,Coca Cola,€2.90,Classic cola drink.,Klassisches Cola-Getränk.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+97,Soft Drinks,Erfrischungsgetränke,Sprite,Sprite,€2.90,Lemon-lime soda.,Zitronen-Limetten-Limonade.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+98,Soft Drinks,Erfrischungsgetränke,Orange Juice,Orangensaft,€3.50,Fresh orange juice.,Frischer Orangensaft.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+99,Soft Drinks,Erfrischungsgetränke,Still Water,Stilles Wasser,€2.50,Natural still water.,Natürliches stilles Wasser.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE
+100,Soft Drinks,Erfrischungsgetränke,Sparkling Water,Sprudelwasser,€2.50,Natural sparkling water.,Natürliches Sprudelwasser.,TRUE,TRUE,TRUE,TRUE,FALSE,,FALSE

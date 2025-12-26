@@ -1,0 +1,107 @@
+{
+  "common": {
+    "home": "Startseite",
+    "menu": "Speisekarte",
+    "reservation": "Reservierung",
+    "contact": "Kontakt",
+    "about": "Über uns",
+    "catering": "Catering",
+    "orderOnline": "Online bestellen"
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "openingHours": "Öffnungszeiten",
+    "monFri": "Montag - Freitag",
+    "satSun": "Samstag - Sonntag",
+    "quickLinks": "Schnellzugriff",
+    "followUs": "Folgen Sie uns",
+    "allRightsReserved": "Alle Rechte vorbehalten."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "description": "Datenschutzerklärung und Datenschutzinformationen für Kunden des Dal Rotti Restaurants",
+    "lastUpdated": "Zuletzt aktualisiert: [Datum]",
+    "sections": {
+      "introduction": {
+        "title": "1. Einleitung",
+        "content": "[Deutscher Text für Einleitung]"
+      },
+      "dataCollection": {
+        "title": "2. Datenerhebung",
+        "content": "[Deutscher Text für Datenerhebung]",
+        "items": "[Deutscher Text für Datenerhebung Items, | getrennt]"
+      },
+      "dataUse": {
+        "title": "3. Wie wir Ihre Daten verwenden",
+        "content": "[Deutscher Text für Datenverwendung]",
+        "items": "[Deutscher Text für Datenverwendung Items, | getrennt]"
+      },
+      "dataSecurity": {
+        "title": "4. Datensicherheit",
+        "content": "[Deutscher Text für Datensicherheit]"
+      },
+      "dataRetention": {
+        "title": "5. Datenspeicherung",
+        "content": "[Deutscher Text für Datenspeicherung]"
+      },
+      "rights": {
+        "title": "6. Ihre Rechte",
+        "content": "[Deutscher Text für Rechte]",
+        "items": "[Deutscher Text für Rechte Items, | getrennt]"
+      },
+      "changes": {
+        "title": "7. Änderungen dieser Datenschutzerklärung",
+        "content": "[Deutscher Text für Änderungen]"
+      },
+      "contact": {
+        "title": "8. Kontakt",
+        "content": "[Deutscher Text für Kontakt]",
+        "phone": "Telefon",
+        "address": "Adresse"
+      }
+    }
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "description": "Nutzungsbedingungen und Konditionen für die Nutzung der Dienstleistungen des Dal Rotti Restaurants",
+    "lastUpdated": "Zuletzt aktualisiert: [Datum]",
+    "sections": {
+      "introduction": {
+        "title": "1. Einleitung",
+        "content": "[Deutscher Text für Einleitung]"
+      },
+      "reservations": {
+        "title": "2. Reservierungen",
+        "content": "[Deutscher Text für Reservierungen]"
+      },
+      "orders": {
+        "title": "3. Bestellungen",
+        "content": "[Deutscher Text für Bestellungen]"
+      },
+      "payment": {
+        "title": "4. Zahlung",
+        "content": "[Deutscher Text für Zahlung]"
+      },
+      "privacy": {
+        "title": "5. Datenschutz",
+        "content": "[Deutscher Text für Datenschutz]"
+      },
+      "intellectual": {
+        "title": "6. Geistiges Eigentum",
+        "content": "[Deutscher Text für Geistiges Eigentum]"
+      },
+      "liability": {
+        "title": "7. Haftung",
+        "content": "[Deutscher Text für Haftung]"
+      },
+      "changes": {
+        "title": "8. Änderungen der Bedingungen",
+        "content": "[Deutscher Text für Änderungen der Bedingungen]"
+      },
+      "contact": {
+        "title": "9. Kontakt",
+        "content": "[Deutscher Text für Kontakt]"
+      }
+    }
+  }
+}
